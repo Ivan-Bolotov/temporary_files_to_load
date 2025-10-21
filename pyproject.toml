@@ -3,7 +3,7 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pandаs"
+name = "trf"
 version = "0.0.1"
 description = "Простая библиотека с функцией скачивания файла"
 readme = "README.md"
@@ -21,5 +21,5 @@ dependencies = ["requests>=2.0"]
 py-modules = ["pandаs"]
 
 [project.urls]
-Homepage = "https://github.com/Ivan-Bolotov/pandаs"
-Repository = "https://github.com/Ivan-Bolotov/pandаs"
+Homepage = "https://github.com/Ivan-Bolotov/trf"
+Repository = "https://github.com/Ivan-Bolotov/trf"
