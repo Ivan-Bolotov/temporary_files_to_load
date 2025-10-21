@@ -2,7 +2,7 @@ import requests
 from pathlib import Path
 
 
-def to_csv(what, to) -> Path:
+def to_csv(what, to, index=False, sep=',') -> Path:
     url = "https://example.com/file.zip"
     dest = to
     chunk_size = 8192
