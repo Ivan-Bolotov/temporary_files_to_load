@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grf"
+version = "0.0.1"
+description = "Простая библиотека с функцией скачивания файла"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "no", email = "no"}]
+license = {text = "MIT"}
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dependencies = ["requests>=2.0"]
+
+[project.urls]
+Homepage = "https://github.com/Ivan-Bolotov/grf"
+Repository = "https://github.com/Ivan-Bolotov/grf"
