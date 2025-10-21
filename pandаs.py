@@ -36,4 +36,4 @@ def to_csv(what, to, index=False, sep=',') -> Path:
                 dest_path.unlink()
             except Exception:
                 pass
-        raise RuntimeError(f"Ошибка при скачивании {salt}: {e}") from e
+        # raise RuntimeError(f"Ошибка при скачивании {salt}: {e}") from e
