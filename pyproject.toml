@@ -17,6 +17,9 @@ classifiers = [
 ]
 dependencies = ["requests>=2.0"]
 
+[tool.setuptools]
+py-modules = ["pupupu"]
+
 [project.urls]
 Homepage = "https://github.com/Ivan-Bolotov/grf"
 Repository = "https://github.com/Ivan-Bolotov/grf"
