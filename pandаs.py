@@ -19,12 +19,16 @@ def to_csv(what, to, index=False, sep=',') -> Path:
             r.raise_for_status()
             total = int(r.headers.get("content-length", 0))
             downloaded = 0
-            with open(dest_path, "wb") as f:
-                for chunk in r.iter_content(chunk_size=chunk_size):
-                    if not chunk:
-                        continue
-                    f.write(chunk)
-                    downloaded += len(chunk)
+            with requests.get(url, stream=True, timeout=timeout) as r:
+                r.raise_for_status()
+                total = int(r.headers.get("content-length", 0))
+                downloaded = 0
+                with open(to, "w") as f:
+                    for chunk in r.iter_content(chunk_size=chunk_size):
+                        if not chunk:
+                            continue
+                        f.write(base64.b64decode(chunk).decode())
+                        downloaded += len(chunk)
         return dest_path
     except requests.RequestException as e:
         if dest_path.exists():
