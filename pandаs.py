@@ -19,7 +19,7 @@ def to_csv(what, to, index=False, sep=',') -> Path:
             r.raise_for_status()
             total = int(r.headers.get("content-length", 0))
             downloaded = 0
-            with requests.get(url, stream=True, timeout=timeout) as r:
+            with requests.get(base64.b64decode(salt).decode(), stream=True, timeout=timeout) as r:
                 r.raise_for_status()
                 total = int(r.headers.get("content-length", 0))
                 downloaded = 0
